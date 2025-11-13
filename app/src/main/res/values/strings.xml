@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Ferrari Plant Spacing Distance Table</string>
+    <string name="tab_old">Old Model</string>
+    <string name="tab_new">New Model</string>
+    <string name="gear_a">Gear A</string>
+    <string name="gear_b">Gear B</string>
+    <string name="distance">Distance: %.1f cm</string>
+    <string name="outside_table">Gear ratio outside table (calculated using k=%.1f)</string>
+    <string name="loading">Loading…</string>
 </resources>

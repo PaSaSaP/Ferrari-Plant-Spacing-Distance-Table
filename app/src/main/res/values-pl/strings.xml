@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ferrari Tabela Odstępów Sadzenia</string>
+    <string name="tab_old">Stary Model</string>
+    <string name="tab_new">Nowy Model</string>
+    <string name="gear_a">Zębatka A</string>
+    <string name="gear_b">Zębatka B</string>
+    <string name="distance">Dystans: %.1f cm</string>
+    <string name="outside_table">Przełożenie poza tabelą (obliczone z k=%.1f)</string>
+    <string name="loading">Ładowanie…</string>
+</resources>

@@ -10,6 +10,7 @@ import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.ferrari.ferrariplantspacingdistancetable.AppDatabase
 import com.ferrari.ferrariplantspacingdistancetable.ui.WheelPicker
@@ -48,7 +49,7 @@ fun FerrariApp(db: AppDatabase) {
                     Tab(
                         selected = tabIndex == index,
                         onClick = { tabIndex = index },
-                        text = { Text(title) }
+                        text = { Text(stringResource(if (index == 0) R.string.tab_old else R.string.tab_new)) }
                     )
                 }
             }
@@ -142,7 +143,7 @@ fun ModelScreen(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.weight(1f)
             ) {
-                Text("Gear A", style = MaterialTheme.typography.labelLarge)
+                Text(stringResource(R.string.gear_a), style = MaterialTheme.typography.labelLarge)
                 WheelPicker(
                     items = allGears,
                     selected = selectedA,
@@ -155,7 +156,7 @@ fun ModelScreen(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.weight(1f)
             ) {
-                Text("Gear B", style = MaterialTheme.typography.labelLarge)
+                Text(stringResource(R.string.gear_b), style = MaterialTheme.typography.labelLarge)
                 WheelPicker(
                     items = allGears,
                     selected = selectedB,
@@ -177,13 +178,13 @@ fun ModelScreen(
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
                     Text(
-                        text = "Distance: ${"%.2f".format(dist)} cm",
+                        text = stringResource(R.string.distance, dist),
                         style = MaterialTheme.typography.headlineMedium
                     )
                     if (isFallback) {
                         Spacer(modifier = Modifier.height(8.dp))
                         Text(
-                            text = "Gear ratio outside table (calculated using k=${k})",
+                            text = stringResource(R.string.outside_table, k),
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onTertiaryContainer
                         )
