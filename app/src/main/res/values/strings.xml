@@ -7,4 +7,5 @@
     <string name="distance">Distance: %.1f cm</string>
     <string name="outside_table">Gear ratio outside table (calculated using k=%.1f)</string>
     <string name="loading">Loading…</string>
+    <string name="gear_diagram_desc">Diagram showing Gear A and Gear B configuration</string>
 </resources>
